@@ -24,6 +24,22 @@
           />
           <h1 class="caesar-dressing-regular">Odin</h1>
         </div>
+        <p>
+          Photo by
+          <a
+            href="https://unsplash.com/@sunify"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Alexander Lunyov</a
+          >
+          on
+          <a
+            href="https://unsplash.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Unsplash</a
+          >
+        </p>
       </section>
       <section>
         <p>
@@ -33,35 +49,64 @@
         </p>
         <p>You <i>know</i> you want to.</p>
 
-        <form action="/submit">
+        <form action="/submit" id="createAccount">
           <legend>Let's do this!</legend>
 
           <div>
             <div>
               <label for="first">FIRST NAME</label>
-              <input type="text" id="first" name="first" required />
+              <input
+                type="text"
+                id="first"
+                name="first"
+                placeholder="Thor"
+                required
+              />
               <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+                required
+              />
               <label for="password">PASSWORD</label>
               <input
                 type="password"
                 id="password"
                 name="password"
                 class="pass"
+                minlength="8"
                 required
               />
             </div>
 
             <div>
               <label for="last">LAST NAME</label>
-              <input type="text" id="last" name="last" required />
+              <input
+                type="text"
+                id="last"
+                name="last"
+                placeholder="Odinson"
+                required
+              />
               <label for="phone">PHONE NUMBER</label>
-              <input type="tel" id="phone" name="phone" required />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                minlength="10"
+                maxlength="13"
+                pattern="^\+(?:[0-9]?){6,25}[0-9]$"
+                placeholder="+123456789012"
+                required
+              />
               <label for="conf-password">CONFIRM PASSWORD</label>
               <input
                 type="password"
                 id="conf-password"
                 name="conf-password"
+                minlength="8"
                 class="pass"
                 required
               />
@@ -69,7 +114,7 @@
           </div>
         </form>
 
-        <button type="submit">Create Account</button>
+        <button type="submit" form="createAccount">Create Account</button>
         <p class="login">Already have an account? <a href="#">Log in</a></p>
       </section>
     </div>
